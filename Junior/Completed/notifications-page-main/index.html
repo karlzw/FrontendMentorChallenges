@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Notifications page</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+      :root {
+        --Mobile: 375px;
+        --Desktop: 1440px;
+        --Red: hsl(1, 90%, 64%);
+        --Blue: hsl(219, 85%, 26%);
+        --White: hsl(0, 0%, 100%);
+        --Verylightgrayishblue: hsl(210, 60%, 98%);
+        --Lightgrayishblue1: hsl(211, 68%, 94%);
+        --Lightgrayishblue2: hsl(205, 33%, 90%);
+        --Grayishblue: hsl(219, 14%, 63%);
+        --Darkgrayishblue: hsl(219, 12%, 42%);
+        --Verydarkblue: hsl(224, 21%, 14%);
+        --paragraph: 16px;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Plus Jakarta Sans";
+        font-size: 16px;
+      }
+
+      body {
+        background-color: var(--Lightgrayishblue1);
+      }
+
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--White);
+        border-radius: 12px;
+        padding: 25px;
+        width: 650px;
+        height: 700px;
+      }
+
+      .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .header h1 {
+        font-size: 25px;
+      }
+
+      .header h2 {
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      .header h2:hover {
+        color: var(--Blue);
+        font-weight: 600;
+      }
+
+      .header span {
+        background-color: var(--Blue);
+        color: white;
+        border-radius: 5px;
+        padding: 2px 6px 2px 6px;
+        font-size: 20px;
+        margin-left: 5px;
+      }
+
+      .notification {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 5px;
+      }
+
+      .notification .content strong:hover,
+      .notification .content span:hover {
+        color: var(--Blue);
+      }
+      .notification:nth-child(1),
+      .notification:nth-child(2),
+      .notification:nth-child(3) {
+        background-color: var(--Lightgrayishblue2);
+      }
+
+      .notification img {
+        padding: 5px 15px;
+        width: 50px;
+      }
+
+      .notification .content {
+        font-size: 16px;
+      }
+
+      .notification .content span {
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .notification .container p strong {
+        cursor: pointer;
+      }
+
+      .notification .message {
+        background-color: var(--Lightgrayishblue1);
+        padding: 10px;
+        line-height: 25px;
+      }
+
+      small {
+        font-weight: 200;
+      }
+
+      .notification:nth-child(4) {
+        position: relative;
+        margin-bottom: 110px;
+      }
+
+      .notification:nth-child(4) .content:after {
+        content: " Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game";
+        padding: 10px;
+        line-height: 25px;
+        position: absolute;
+        top: 80px;
+        left: 90px;
+        max-width: 525px;
+        border-radius: 5px;
+        border: 1px solid var(--Grayishblue);
+        cursor: pointer;
+      }
+
+      .notification:nth-child(4) .content:hover:after {
+        background-color: var(--Lightgrayishblue1);
+        border: none;
+      }
+
+      .notification:nth-child(5) {
+        position: relative;
+      }
+
+      .notification:nth-child(5):after {
+        content: url("./assets/images/image-chess.webp");
+        position: absolute;
+        top: -5;
+        left: 550px;
+        transform: scale(0.5);
+        cursor: pointer;
+      }
+
+      @media (max-width: 400px) {
+        .container {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translate(0, -0);
+          padding: 20px 10px;
+          width: 355px;
+          height: 1000px;
+        }
+
+        .header h1 {
+          font-size: 20px;
+        }
+
+        .notification img {
+          padding: 5px 10px;
+          width: 45px;
+        }
+
+        .notification:nth-child(4) {
+          margin-bottom: 175px;
+        }
+        .notification:nth-child(4) .content:after {
+          top: 80px;
+          left: 65px;
+          max-width: 250px;
+        }
+
+        .notification:nth-child(4) .content:hover:after {
+          background-color: var(--Lightgrayishblue1);
+          border: none;
+        }
+
+        .notification:nth-child(5) {
+          position: relative;
+        }
+
+        .notification:nth-child(5):after {
+          content: url("./assets/images/image-chess.webp");
+          position: absolute;
+          top: 5px;
+          left: 300px;
+          transform: scale(0.5);
+          cursor: pointer;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Notifications <span id="count">3</span></h1>
+        <h2 id="markAsRead">Mark all as read</h2>
+      </div>
+
+      <div class="notifications">
+        <div class="notification">
+          <img
+            src="./assets/images/avatar-mark-webber.webp"
+            alt="Mark Webber"
+          />
+          <div class="content">
+            <p>
+              <span>Mark Webber</span> reacted to your recent post
+              <span>My first tournament today!</span>
+            </p>
+            <small>1m ago</small>
+          </div>
+        </div>
+
+        <div class="notification">
+          <img
+            src="./assets/images/avatar-angela-gray.webp"
+            alt="Angela Gray"
+          />
+          <div class="content">
+            <p><span>Angela Gray</span> followed you</p>
+            <small>5m ago</small>
+          </div>
+        </div>
+
+        <div class="notification">
+          <img
+            src="./assets/images/avatar-jacob-thompson.webp"
+            alt="Jacob Thompson"
+          />
+          <div class="content">
+            <p>
+              <span>Jacob Thompson</span> has joined your group
+              <span>Chess Club</span>
+            </p>
+            <small>1 day ago</small>
+          </div>
+        </div>
+        <div class="notification">
+          <img
+            src="./assets/images/avatar-rizky-hasanuddin.webp"
+            alt="Rizky Hasanuddin"
+          />
+          <div class="content">
+            <p><span>Rizky Hasanuddin</span> has sent you a message</p>
+            <small>5 days ago</small>
+          </div>
+        </div>
+        <div class="notification">
+          <img
+            src="./assets/images/avatar-kimberly-smith.webp"
+            alt="Kimberly Smith"
+          />
+          <div class="content">
+            <p><span>Kimberly Smith</span> commented on your picture</p>
+            <small>1week ago</small>
+          </div>
+        </div>
+        <div class="notification">
+          <img
+            src="./assets/images/avatar-nathan-peterson.webp"
+            alt="Nathan Peterson"
+          />
+          <div class="content">
+            <p>
+              <span>Nathan Peterson</span> reacted to your recent post
+              <span>5 end-game strategies to increase your win rate</span>
+            </p>
+            <small>2 weeks go</small>
+          </div>
+        </div>
+        <div class="notification">
+          <img
+            src="./assets/images/avatar-anna-kim.webp"
+            alt="Kimberly Smith"
+          />
+          <div class="content">
+            <p>
+              <span>Kimberly Smith</span> left the group
+              <span>Chess Club</span>
+            </p>
+            <small>2 weeks ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const markAsRead = document.getElementById("markAsRead");
+      const notifications = document.getElementsByClassName("notification");
+      const count = document.getElementById("count");
+
+      markAsRead.onclick = () => {
+        for (let i = 0; i < notifications.length; i++) {
+          notifications[i].style.backgroundColor = "white";
+        }
+        count.innerHTML = "0";
+      };
+    </script>
+  </body>
+</html>

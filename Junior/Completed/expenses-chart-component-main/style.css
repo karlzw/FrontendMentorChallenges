@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --softRed: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --darkBrown: hsl(25, 47%, 15%);
+    --mediumBrown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --veryPaleOrange: hsl(33, 100%, 98%);
+    --fontSize: 18px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--cream);
+    margin: auto;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 600px;
+
+}
+
+
+.balance {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--softRed);
+    padding: 25px;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 14px;
+
+}
+
+.balance img {
+    width: 60px;
+}
+
+.activity {
+    background-color: var(--veryPaleOrange);
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.history {
+    text-align: right;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.days {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+
+.bars h2 {
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.days {
+
+    align-items: flex-end;
+}
+
+
+.bar-container {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 5px;
+    margin-top: 10px;
+}
+
+.bar-container p {
+    text-align: center;
+
+}
+
+
+.bar {
+    background-color: var(--softRed);
+    width: 40px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.bar:hover {
+    background-color: var(--cyan);
+}
+
+.amount {
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    padding: 0 5px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    display: none;
+}
+
+.bar:hover .amount {
+    display: block;
+}
+
+
+@media (max-width: 450px) {
+    .container {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        margin: auto 0;
+        transform: translate(-50%, -50%);
+        width: 350px;
+    }
+
+
+    .balance {
+        padding: 15px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        font-size: 12px;
+
+    }
+
+    .details {
+        font-size: 14px;
+    }
+
+    .bar {
+        width: 30px;
+        border-radius: 5px;
+    }
+
+
+
+    .amount {
+        top: -25px;
+        left: -8px;
+        padding: 0 3px;
+        font-size: 12px;
+        display: none;
+        font-weight: 400;
+    }
+
+}

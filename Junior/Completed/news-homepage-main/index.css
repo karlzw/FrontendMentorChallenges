@@ -1,0 +1,297 @@
+ :root {
+     --Mobile: 375px;
+     --Desktop: 1440px;
+     --softOrange: hsl(35, 77%, 62%);
+     --softRed: hsl(5, 85%, 63%);
+     --Off-white: hsl(36, 100%, 99%);
+     --grayishBlue: hsl(233, 8%, 79%);
+     --darkGrayishBlue: hsl(236, 13%, 42%);
+     --veryDarkBlue: hsl(240, 100%, 5%);
+     --paragraph: 15px;
+ }
+
+ @font-face {
+     font-family: Inter;
+     src: url("/assets/fonts/static/Inter-Regular.ttf");
+ }
+
+ * {
+     padding: 0;
+     margin: 0;
+     font-family: Inter;
+ }
+
+ body {
+     margin: 60px;
+     font-family: Inter;
+ }
+
+ .navigation {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin-bottom: 40px;
+ }
+
+ .navigation ul {
+     display: flex;
+     flex-direction: row;
+ }
+
+ .navigation ul li {
+     list-style: none;
+     display: flex;
+     margin: 10px;
+     cursor: pointer;
+     font-size: 18px;
+     margin-left: 50px;
+ }
+
+ .navigation ul li:hover,
+ .navigation ul li:hover {
+     color: var(--softOrange);
+ }
+
+ .hero {
+     display: flex;
+     flex-direction: row;
+     margin-top: 20px;
+ }
+
+ .left .web-3 {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+ }
+
+
+ .left {
+     width: 70vw;
+     margin-right: 20px;
+ }
+
+
+ .left .image img {
+     width: 100%;
+ }
+
+
+ .left button {
+     background-color: var(--softRed);
+     border: none;
+     color: white;
+     height: 50px;
+     width: 200px;
+     margin-left: 20px;
+     cursor: pointer;
+     font-weight: 600;
+ }
+
+ .left button:hover,
+ .left button:active {
+     background-color: hsl(240, 100%, 5%);
+ }
+
+ .left .web-3 p {
+     padding: 20px;
+     font-size: var(--paragraph);
+     line-height: 25px;
+ }
+
+ .left .web-3 h1 {
+     font-size: 50px;
+     padding: 20px 20px 20px 0;
+     font-weight: 700;
+ }
+
+ .right {
+     background-color: var(--veryDarkBlue);
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     padding: 20px;
+ }
+
+ .right h1 {
+     color: var(--softOrange);
+     font-size: 40px;
+     margin-bottom: 20px;
+     font-weight: 800;
+ }
+
+ .right h2 {
+     margin-top: 5px;
+     color: var(--Off-white);
+     margin-bottom: 15px;
+     cursor: pointer;
+     font-weight: 700;
+ }
+
+ .right h2:hover,
+ .right h2:active {
+     color: var(--softOrange);
+ }
+
+ .right p {
+     color: var(--grayishBlue);
+     font-size: var(--paragraph);
+     border-bottom: 1px solid var(--darkGrayishBlue);
+     padding-bottom: 20px;
+     line-height: 25px;
+ }
+
+ .right div:nth-child(4) p {
+     border: none;
+ }
+
+
+ .last {
+     margin-top: 60px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+ }
+
+ .last .card {
+     display: flex;
+     flex-direction: row;
+ }
+
+
+ .last img {
+     margin-right: 20px;
+     width: 150px;
+     height: auto;
+ }
+
+ .last .card h1 {
+     font-size: 40px;
+     color: var(--grayishBlue);
+     font-weight: 700px;
+ }
+
+ .last .card h2 {
+     font-weight: 600;
+ }
+
+ .last .card h2:hover,
+ .last .card h2:active {
+     color: var(--softRed);
+ }
+
+ .icon {
+     display: none;
+ }
+
+ .last .card div {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+ }
+
+ @media (max-width: 500px) {
+
+     body {
+         margin: 15px;
+
+     }
+
+     .icon {
+         display: block;
+     }
+
+     .navigation {
+         margin-top: 10px;
+         position: relative;
+         display: flex;
+         align-items: center;
+     }
+
+     .navigation ul {
+         padding: 50px 0;
+         display: block;
+         position: fixed;
+         right: -200px;
+         z-index: 4;
+         background-color: #fff;
+         height: 800px;
+         width: 200px;
+
+     }
+
+     .navigation ul li {
+         padding: 8px 0;
+         margin-left: 25px;
+     }
+
+     .navigation ul img {
+         position: absolute;
+         right: 10px;
+         top: 5px;
+     }
+
+     .hero {
+         display: flex;
+         flex-direction: column;
+         /* margin-top: 20px; */
+     }
+
+     .left {
+         width: 100%;
+
+     }
+
+     .left .web-3 {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-evenly;
+     }
+
+     .left .web-3 h1,
+     .left .web-3 p {
+         margin-top: 20px;
+         padding: 0;
+     }
+
+     .left .web-3 p {
+         font-size: 16px;
+         line-height: 25px;
+     }
+
+     .right {
+         margin-top: 20px;
+     }
+
+     .last {
+         margin-top: 40px;
+         display: flex;
+         flex-direction: column;
+     }
+
+     .last .card {
+         display: flex;
+         flex-direction: row;
+         margin-top: 20px;
+     }
+
+     .left .web-3 button {
+         margin-top: 20px;
+         margin-left: 0;
+     }
+
+     .last .card p {
+         font-size: 14px;
+     }
+
+     .last .card div {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-evenly;
+     }
+
+     .last .card img {
+         margin-right: 10px;
+     }
+
+
+ }

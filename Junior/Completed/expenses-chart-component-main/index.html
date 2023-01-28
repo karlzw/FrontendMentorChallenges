@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.svg" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="balance">
+        <div class="details">
+          <p>My balance</p>
+          <h1>$921.48</h1>
+        </div>
+        <img src="./images/logo.svg" alt="icon" />
+      </div>
+      
+      <div class="activity">
+        <div class="bars">
+          <h2>Spending - Last 7 days</h2>
+
+          <div class="days">
+            <div class="bar-container">
+              <div id="mon-bar" class="bar">
+                <span class="amount">$89.89</span>
+              </div>
+              <p>mon</p>
+            </div>
+
+            <div class="bar-container">
+              <div id="tue-bar" class="bar">
+                <span class="amount">$89.89</span>
+              </div>
+              <p>tue</p>
+            </div>
+
+            <div class="bar-container">
+              <div id="wed-bar" class="bar">
+                <span class="amount">$89.89</span>
+              </div>
+              <p>wed</p>
+            </div>
+
+            <div class="bar-container">
+              <div id="thu-bar" class="bar">
+                <span class="amount">$89.89</span>
+              </div>
+              <p>thu</p>
+            </div>
+
+            <div class="bar-container">
+              <div id="fri-bar" class="bar">
+                <span class="amount">$89.89</span>
+              </div>
+              <p>fri</p>
+            </div>
+
+            <div class="bar-container">
+              <div id="sat-bar" class="bar">
+                <span class="amount">$89.89</span>
+              </div>
+              <p>sat</p>
+            </div>
+
+            <div class="bar-container">
+              <div id="sun-bar" class="bar">
+                <span class="amount">$89.89</span>
+              </div>
+              <p>sun</p>
+            </div>
+          </div>
+        </div>
+        <div class="month">
+          <div class="details">
+            <p>Total this month</p>
+            <h1 id="monthlyTotal">$478.33</h1>
+          </div>
+          <div class="history">
+            <h2 id="percentageIncrease">+2.4%</h2>
+            <p>from last month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

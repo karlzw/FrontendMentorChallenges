@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <script defer src="./js/bootstrap.js"></script>
+    <style>
+      body {
+        background-color: black;
+      }
+
+      .bg-orange {
+        background-color: hsl(25, 97%, 53%);
+        color: white;
+      }
+
+      .bg-white {
+        background-color: hsl(0, 0%, 100%);
+      }
+
+      .bg-lightgrey {
+        background-color: hsl(217, 12%, 63%);
+      }
+
+      .bg-mediumgrey {
+        background-color: hsl(216, 12%, 54%);
+      }
+      .bg-darkblue {
+        background-color: hsl(213, 19%, 18%);
+      }
+
+      .bg-verydarkblue {
+        background-color: hsl(216, 12%, 8%);
+      }
+
+      .rating:hover {
+        background-color: hsl(25, 97%, 53%);
+        color: #fff;
+      }
+
+      .submit-btn:hover {
+        background-color: #fff;
+        color: hsl(25, 97%, 53%);
+      }
+
+      input[type="checkbox"] {
+        visibility: ;
+      }
+
+      input:checked + label {
+        color: red;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="card bg-darkblue text-white d-flex p-4 position-absolute top-50 start-50 justify-content-between translate-middle"
+      style="width: 400px; height: 350px; border-radius: 20px"
+    >
+      <div
+        class="bg-verydarkblue text-center rounded-circle"
+        style="width: 30px; height: 30px"
+      >
+        <img src="./images/icon-star.svg" />
+      </div>
+      <h1>How did we do?</h1>
+      <p style="color: hsl(217, 12%, 63%)" class="lh-base">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+      <form class="d-flex flex-row justify-content-between">
+        <div>
+          <label
+            for="one"
+            name="rate"
+            class="btn btn-dark rounded-circle rating"
+          >
+            1
+          </label>
+          <input id="one" type="checkbox" />
+        </div>
+        <div>
+          <label
+            for="two"
+            name="rate"
+            class="btn btn-dark rounded-circle rating"
+          >
+            2
+          </label>
+          <input id="two" type="checkbox" />
+        </div>
+        <div>
+          <label
+            for="three"
+            name="rate"
+            class="btn btn-dark rounded-circle rating"
+          >
+            3
+          </label>
+          <input id="three" type="checkbox" />
+        </div>
+        <div>
+          <label
+            for="four"
+            name="rate"
+            class="btn btn-dark rounded-circle rating"
+          >
+            4
+          </label>
+          <input id="four" type="checkbox" />
+        </div>
+        <div>
+          <label
+            for="five"
+            name="rate"
+            class="btn btn-dark rounded-circle rating"
+          >
+            5
+          </label>
+          <input id="five" type="checkbox" />
+        </div>
+      </form>
+      <button
+        class="btn bg-orange w-100 rounded-pill text-uppercase submit-btn"
+      >
+        Submit
+      </button>
+    </div>
+
+    <!-- <div class="second"> -->
+    <!-- Thank you state start -->
+    <!-- You selected -->
+    <!-- Add rating here -->
+    <!-- out of 5 Thank you! We appreciate you taking the time to give a rating. If
+      you ever need more support, don’t hesitate to get in touch! -->
+
+    <!-- Thank you state end -->
+    <!-- </div> -->
+  </body>
+</html>

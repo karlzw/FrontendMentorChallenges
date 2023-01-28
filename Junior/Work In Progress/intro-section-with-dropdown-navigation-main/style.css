@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+
+:root {
+    --AlmostWhite: hsl(0, 0%, 98%);
+    --MediumGray: hsl(0, 0%, 41%);
+    --AlmostBlack: hsl(0, 0%, 8%);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    padding: 20px 40px;
+    background-color: var(--AlmostWhite);
+}
+
+.header .navigation {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.header nav img {
+    width: 10px;
+    margin-left: 10px;
+}
+
+.header .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header nav>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header nav>ul>li {
+    cursor: pointer;
+}
+
+
+.header .right nav li:last-child {
+    border: 2px solid var(--MediumGray);
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.header .right nav li:last-child:hover {
+    border-color: black;
+}
+
+.header .right li {
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.header nav>ul>li {
+    color: var(--MediumGray);
+    margin-right: 40px;
+}
+
+.header nav>ul>li:hover {
+    color: black;
+}
+
+.header .dropdown ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.header .dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 80px;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 10;
+
+}
+
+.header .features .dropdown {
+    position: absolute;
+    left: 80px;
+    z-index: 10;
+}
+
+.header .features .dropdown img {
+    margin-right: 10px;
+}
+
+.header .dropdown li {
+    margin: 10px 0;
+}
+
+.header .mobile {
+    display: none;
+}
+
+.header>img {
+    width: 100px;
+    margin-right: 50px;
+    object-fit: contain;
+}
+
+.header li {
+    list-style: none;
+}
+
+.header .dropdown-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.hero {
+    margin: 20px 150px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: repeat(5, 120px);
+    position: relative;
+    align-items: flex-end;
+
+}
+
+.hero .details {
+    grid-row: 1/span 2;
+}
+
+
+.hero .details h1 {
+    font-size: 84px;
+
+}
+
+.hero .information {
+    grid-row: 3;
+    grid-column: 1;
+    max-width: 450px;
+    font-size: 84px;
+}
+
+.hero .button {
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.hero .button button {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.hero .button button:hover {
+    background-color: #fff;
+    color: black;
+}
+
+
+.hero .clients {
+    grid-row: 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 50px;
+    max-width: 550px;
+}
+
+.hero .clients img {
+    width: 100px;
+    object-fit: contain;
+}
+
+.hero .image-container {
+    grid-row: 1/6;
+    grid-column: 2;
+}
+
+.hero .image-container img {
+    height: 560px;
+    width: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 5px 0;
+    }
+
+    .header {
+        height: 20px;
+        position: relative;
+        padding: 5px;
+    }
+
+    .header .navigation {
+        display: block;
+        height: 1000px;
+        position: fixed;
+        width: 70%;
+        top: -5px;
+        right: -300px;
+        z-index: 2;
+        background-color: #fff;
+    }
+
+    .header .navigation li {
+        margin-top: 25px;
+        margin-left: 20px;
+    }
+
+
+    .header .close {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+
+    .header .right nav li {
+        text-align: center;
+    }
+
+    .header .mobile {
+        display: block;
+    }
+
+
+    .header nav>ul {
+        display: block;
+    }
+
+
+
+
+    .header nav>ul>li {
+        margin-right: 0px;
+    }
+
+
+    .header .dropdown {
+        display: none;
+        position: relative;
+        background-color: white;
+        top: 0px;
+        padding: 0px;
+        z-index: 3;
+    }
+
+    .header .features .dropdown {
+        position: relative;
+        left: 0px;
+        z-index: 10;
+    }
+
+    .header .company .dropdown {
+        margin-left: 10px;
+    }
+
+
+    .header .dropdown li {
+        margin-top: 8px;
+    }
+
+
+    .header>img {
+        width: 200px;
+        margin-right: 0px;
+        object-fit: contain;
+    }
+
+    .hero {
+        margin: 0;
+        display: block;
+    }
+
+    .hero .image-container img {
+        content: url("./images/image-hero-mobile.png");
+        margin: 20px 0;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+
+    .hero .details h1 {
+        font-size: 20px;
+    }
+
+    .hero #break {
+        display: none;
+    }
+
+
+
+}
